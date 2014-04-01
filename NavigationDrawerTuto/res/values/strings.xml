@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FerloMPos</string>
+    <string name="action_settings">Settings</string>
+    <string name="bntValider">Valider</string>
+ 
+ 	<string-array name="items">
+        <item>Parametrages</item>
+        <item>Paiement</item>
+        <item>Remboursement</item>
+        <item>Duplicatat</item>
+        <item>Parametres</item>
+        <item>Autres</item>
+    </string-array>
+
+    <string name="text_montant">Saissez un montant</string>
+    
+    <string name="ouverture">Ouverture</string>
+    <string name="fermeture">Fermeture</string>
+    <string name="titre">Titre</string>
+    <string name="titre_apres_ouverture">choisissez un menu</string>
+    
+</resources>

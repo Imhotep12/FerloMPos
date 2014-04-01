@@ -1,0 +1,87 @@
+package com.tutos.android.navigationdrawertuto;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.widget.DrawerLayout;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	private String[] drawerItemsList;
+	private ListView myDrawer;
+	private TextView myTextView;
+	private ActionBarDrawerToggle mDrawerToggle;
+	private DrawerLayout drawerLayout;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+		myTextView = (TextView) findViewById(R.id.display_drawer_txt);
+
+		drawerItemsList = getResources().getStringArray(R.array.items);
+		myDrawer = (ListView) findViewById(R.id.my_drawer);
+		myDrawer.setAdapter(new ArrayAdapter<String>(this,
+				R.layout.drawer_item, drawerItemsList));
+
+		myDrawer.setOnItemClickListener(new MyDrawerItemClickListener());
+
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setHomeButtonEnabled(true);
+
+		mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,
+				R.drawable.ic_launcher, R.string.ouverture, R.string.fermeture) {
+			public void onDrawerClosed(View view) {
+				getActionBar().setTitle(R.string.titre);
+				invalidateOptionsMenu();
+			}
+
+			public void onDrawerOpened(View drawerView) {
+				getActionBar().setTitle(R.string.titre_apres_ouverture);
+				invalidateOptionsMenu();
+			}
+		};
+		drawerLayout.setDrawerListener(mDrawerToggle);
+	}
+
+	private class MyDrawerItemClickListener implements
+			ListView.OnItemClickListener {
+		@Override
+		public void onItemClick(AdapterView<?> adapter, View v, int pos, long id) {
+			String clickedItem = (String) adapter.getAdapter().getItem(pos);
+			myTextView.setText(clickedItem);
+			drawerLayout.closeDrawer(myDrawer);
+		}
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if (mDrawerToggle.onOptionsItemSelected(item)) {
+			return true;
+		}
+		switch (item.getItemId()) {
+		case R.id.action_settings:
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}
