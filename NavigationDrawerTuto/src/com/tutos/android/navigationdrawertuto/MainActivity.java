@@ -1,9 +1,13 @@
 package com.tutos.android.navigationdrawertuto;
 
+
+
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,11 +23,14 @@ public class MainActivity extends Activity {
 	private TextView myTextView;
 	private ActionBarDrawerToggle mDrawerToggle;
 	private DrawerLayout drawerLayout;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
 
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -40,7 +47,7 @@ public class MainActivity extends Activity {
 		getActionBar().setHomeButtonEnabled(true);
 
 		mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,
-				R.drawable.ic_launcher, R.string.ouverture, R.string.fermeture) {
+				R.drawable.ferlo6, R.string.ouverture, R.string.fermeture) {
 			public void onDrawerClosed(View view) {
 				getActionBar().setTitle(R.string.titre);
 				invalidateOptionsMenu();
@@ -51,7 +58,11 @@ public class MainActivity extends Activity {
 				invalidateOptionsMenu();
 			}
 		};
+		
+		
 		drawerLayout.setDrawerListener(mDrawerToggle);
+		
+		
 	}
 
 	private class MyDrawerItemClickListener implements
@@ -59,12 +70,35 @@ public class MainActivity extends Activity {
 		@Override
 		public void onItemClick(AdapterView<?> adapter, View v, int pos, long id) {
 			String clickedItem = (String) adapter.getAdapter().getItem(pos);
-			myTextView.setText(clickedItem);
-			drawerLayout.closeDrawer(myDrawer);
+			Log.d("position :", ""+pos);
+			Intent intent0 = new Intent(MainActivity.this, parametrage_activity.class);
+			Intent intent1 = new Intent(MainActivity.this, paiement_activity.class);
+			switch (pos) {
+			case 0: startActivityForResult(intent0, 0);return;
+			case 1: startActivityForResult(intent1, 1);return;
+			default :setContentView(R.layout.activity_main);
+			
+			}
+			
+	
+			
+		/*	myTextView.setText(clickedItem); */
+				drawerLayout.closeDrawer(myDrawer); 
 		}
 	}
 
+	
 	@Override
+   protected void onActivityResult (int requestcode,int response,Intent data)
+	{
+		
+		
+	}
+		   
+		   
+		   
+	
+/*	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (mDrawerToggle.onOptionsItemSelected(item)) {
 			return true;
@@ -76,12 +110,40 @@ public class MainActivity extends Activity {
 			return super.onOptionsItemSelected(item);
 		}
 	}
+	
+*/
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	
+	
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		
+		if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+	        switch (item.getItemId()) {
+	   
+	        case R.id.text_title:
+	                // Comportement du bouton "Aide"
+	                return true;
+	        case R.id.logo_gim:
+	                // Comportement du bouton "Rafraichir"
+	                return true;
+	        case R.id.title:
+                // Comportement du bouton "Rafraichir"
+                return true;
+	        default:
+	                return super.onOptionsItemSelected(item);
+	        }
 	}
 
 }

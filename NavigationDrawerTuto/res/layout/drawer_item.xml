@@ -2,6 +2,7 @@
  
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/text1"
+    android:background="#0080FF"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textColor="#fff"
@@ -9,3 +10,4 @@
     android:gravity="left"
     android:minHeight="40sp"
 />
+	
