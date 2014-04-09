@@ -13,10 +13,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity  {
 
 	private String[] drawerItemsList;
 	private ListView myDrawer;
@@ -31,15 +32,16 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		
-
+      String text[]= {" PARAMETRAGE"," PAIEMENT"," REMBOURSSEMENT"," PARAMETRE"," A PROPOS"};
+      int imageId[]={R.drawable.lg_parametrage, R.drawable.lg_paiement, R.drawable.lg_remboursement,
+    		  R.drawable.lg_parametre, R.drawable.lg_apropos};
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
 		myTextView = (TextView) findViewById(R.id.display_drawer_txt);
 
 		drawerItemsList = getResources().getStringArray(R.array.items);
 		myDrawer = (ListView) findViewById(R.id.my_drawer);
-		myDrawer.setAdapter(new ArrayAdapter<String>(this,
-				R.layout.drawer_item, drawerItemsList));
+		myDrawer.setAdapter(new MenuList (this, text, imageId) );
 
 		myDrawer.setOnItemClickListener(new MyDrawerItemClickListener());
 
@@ -73,9 +75,15 @@ public class MainActivity extends Activity {
 			Log.d("position :", ""+pos);
 			Intent intent0 = new Intent(MainActivity.this, parametrage_activity.class);
 			Intent intent1 = new Intent(MainActivity.this, paiement_activity.class);
+			Intent intent2 = new Intent(MainActivity.this, Remboursement_activity.class);
+			Intent intent3 = new Intent(MainActivity.this, Duplicatat.class);
+			Intent intent4 = new Intent(MainActivity.this, Parametres_activity.class);
 			switch (pos) {
 			case 0: startActivityForResult(intent0, 0);return;
 			case 1: startActivityForResult(intent1, 1);return;
+			case 2: startActivityForResult(intent2, 2);return;
+			case 3: startActivityForResult(intent3, 3);return;
+			case 4: startActivityForResult(intent4, 4);return;
 			default :setContentView(R.layout.activity_main);
 			
 			}

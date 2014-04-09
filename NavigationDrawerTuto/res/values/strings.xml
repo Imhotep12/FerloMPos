@@ -11,7 +11,7 @@
         <item>Remboursement</item>
         <item>Duplicatat</item>
         <item>Parametres</item>
-        <item>Autres</item>
+        <item>A Propos</item>
     </string-array>
     
  	 <array name="nav_drawer_icons">
@@ -30,7 +30,9 @@
     <string name="btn_retour_acceuil">RETOUR </string>
     <string name="str_num_carte">ATTENTE DE LA CARTE</string>
     <string name="paiement">EFFECTUER UN PAIEMENT</string>
-
+	<string name="str_duplicatat">MERCI DE PATIENTEZ VOTRE DUPLICATAT SERA BIENTOT IMPRIME !</string>
+	<string name="str_parametres">ENTREZ VOS PARAMETRAGES</string>
+	<string name="str_remboursement">MERCI DE PATIENTEZ LA TRANSACTION EST EN COURS</string>
     
     <string name="ouverture">Ouverture</string>
     <string name="fermeture">Fermeture</string>
@@ -39,5 +41,6 @@
     <string name="str_parametrage">Parametrage</string>
     
     <string name="text_title">FerloMPos</string>
+    <string name="str_img">logo des items</string>
     
 </resources>

@@ -5,9 +5,9 @@
     android:background="#0080FF"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textColor="#fff"
+    android:textColor="#EFFBFB"
     android:textSize="20sp"
-    android:gravity="left"
+    android:gravity="center"
     android:minHeight="40sp"
 />
 	

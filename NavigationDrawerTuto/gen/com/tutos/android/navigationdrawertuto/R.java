@@ -42,34 +42,50 @@ public final class R {
         public static final int ferlo6=0x7f020007;
         public static final int ferlo_image=0x7f020008;
         public static final int ic_launcher=0x7f020009;
-        public static final int image_cfa=0x7f02000a;
-        public static final int image_cfa2=0x7f02000b;
-        public static final int logo_carte=0x7f02000c;
-        public static final int logo_carte2=0x7f02000d;
-        public static final int logo_carte3=0x7f02000e;
-        public static final int logo_gim=0x7f02000f;
+        public static final int lg_apropos=0x7f02000a;
+        public static final int lg_duplicatat=0x7f02000b;
+        public static final int lg_paiement=0x7f02000c;
+        public static final int lg_parametrage=0x7f02000d;
+        public static final int lg_parametre=0x7f02000e;
+        public static final int lg_remboursement=0x7f02000f;
+        public static final int logo_carte=0x7f020010;
+        public static final int logo_carte2=0x7f020011;
+        public static final int logo_carte3=0x7f020012;
+        public static final int logo_gim=0x7f020013;
     }
     public static final class id {
-        public static final int amount_txt_id=0x7f090007;
-        public static final int btn_amount=0x7f090008;
-        public static final int btn_retour_acceuil=0x7f090006;
+        public static final int amount_txt_id=0x7f09000b;
+        public static final int btn_amount=0x7f09000c;
+        public static final int btn_retour_acceuil=0x7f090005;
         public static final int display_drawer_txt=0x7f090001;
         public static final int drawer_layout=0x7f090000;
         public static final int drawer_num_carte_layout=0x7f090003;
-        public static final int image_carte_entree2=0x7f090004;
-        public static final int logo_gim=0x7f09000b;
+        public static final int image_carte_entree2=0x7f090009;
+        public static final int img=0x7f090007;
+        public static final int logo_gim=0x7f090011;
         public static final int my_drawer=0x7f090002;
-        public static final int text_title=0x7f090009;
-        public static final int title=0x7f09000a;
-        public static final int txt_view_amount=0x7f090005;
+        public static final int text_title=0x7f09000f;
+        public static final int title=0x7f090010;
+        public static final int txt=0x7f090008;
+        public static final int txt_view_amount=0x7f09000a;
+        public static final int txt_view_apropos=0x7f090004;
+        public static final int txt_view_duplicatat=0x7f090006;
+        public static final int txt_view_parametres=0x7f09000d;
+        public static final int txt_view_remboursement=0x7f09000e;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int button_shape=0x7f030001;
-        public static final int drawer_item=0x7f030002;
-        public static final int num_paiement_item=0x7f030003;
-        public static final int paiement_item=0x7f030004;
-        public static final int parametrage_item=0x7f030005;
+        public static final int apropos_item=0x7f030001;
+        public static final int button_shape=0x7f030002;
+        public static final int drawer_item=0x7f030003;
+        public static final int drawer_list_item=0x7f030004;
+        public static final int duplicatat_item=0x7f030005;
+        public static final int list_single=0x7f030006;
+        public static final int num_paiement_item=0x7f030007;
+        public static final int paiement_item=0x7f030008;
+        public static final int parametrage_item=0x7f030009;
+        public static final int parametres_item=0x7f03000a;
+        public static final int reboursement_item=0x7f03000b;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -81,16 +97,20 @@ public final class R {
         public static final int btnValider=0x7f050002;
         public static final int btn_amount_txt=0x7f050006;
         public static final int btn_retour_acceuil=0x7f050007;
-        public static final int fermeture=0x7f05000b;
-        public static final int ouverture=0x7f05000a;
+        public static final int fermeture=0x7f05000e;
+        public static final int ouverture=0x7f05000d;
         public static final int paiement=0x7f050009;
         public static final int str_amount=0x7f050005;
+        public static final int str_duplicatat=0x7f05000a;
+        public static final int str_img=0x7f050013;
         public static final int str_num_carte=0x7f050008;
-        public static final int str_parametrage=0x7f05000e;
+        public static final int str_parametrage=0x7f050011;
+        public static final int str_parametres=0x7f05000b;
+        public static final int str_remboursement=0x7f05000c;
         public static final int text_montant=0x7f050003;
-        public static final int text_title=0x7f05000f;
-        public static final int titre=0x7f05000c;
-        public static final int titre_apres_ouverture=0x7f05000d;
+        public static final int text_title=0x7f050012;
+        public static final int titre=0x7f05000f;
+        public static final int titre_apres_ouverture=0x7f050010;
     }
     public static final class style {
         /** 

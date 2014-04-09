@@ -40,6 +40,27 @@
                  android:label="@string/app_name" >
             
         </activity>
+        <activity 
+                 android:name="Duplicatat"
+                 android:label="@string/app_name" >
+            
+        </activity>
+        <activity 
+                 android:name="Remboursement_activity"
+                 android:label="@string/app_name" >
+            
+        </activity>
+        <activity 
+                 android:name="Parametres_activity"
+                 android:label="@string/app_name" >
+            
+        </activity>
+        <activity 
+                 android:name="Autres_activity"
+                 android:label="@string/app_name" >
+            
+        </activity>
+        
     </application>
 
 </manifest>
